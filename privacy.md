@@ -17,6 +17,7 @@ Take One é um jogo de adivinhação de filmes desenvolvido pela JHF Labs.
 Disponível para iOS e Android.
 
 - **Contato:** vini.snascimento00@gmail.com
+- **Repositório:** [github.com/snvinni/take-one](https://github.com/snvinni/take-one)
 
 ## 2. Dados que coletamos
 

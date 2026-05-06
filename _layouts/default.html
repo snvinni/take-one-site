@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }} — Take One</title>
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="icon" type="image/png" href="{{ '/assets/icon.png' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@500;700&family=Josefin+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0A0A0A;
+      --primary: #C4A255;
+      --primary-dark: #8B7235;
+      --secondary: #F5E6C8;
+      --text: #F5E6C8;
+      --muted: rgba(245, 230, 200, 0.55);
+      --line: rgba(196, 162, 85, 0.18);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Josefin Sans', system-ui, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    header.site {
+      border-bottom: 1px solid var(--line);
+      padding: 18px 24px;
+      text-align: center;
+    }
+    header.site a {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 22px;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    h1 {
+      font-family: 'Cinzel', serif;
+      color: var(--primary);
+      font-size: clamp(28px, 5vw, 40px);
+      letter-spacing: 0.03em;
+      margin: 0 0 24px;
+    }
+    h2 {
+      font-family: 'Cinzel', serif;
+      color: var(--secondary);
+      font-size: 22px;
+      margin: 36px 0 12px;
+      letter-spacing: 0.02em;
+    }
+    h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      color: var(--primary);
+      font-size: 20px;
+      letter-spacing: 0.12em;
+      margin: 24px 0 8px;
+    }
+    p { margin: 0 0 14px; }
+    a { color: var(--primary); }
+    a:hover { color: var(--secondary); }
+    ul, ol { padding-left: 22px; margin: 0 0 14px; }
+    li { margin: 4px 0; }
+    code {
+      background: rgba(196, 162, 85, 0.1);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    strong { color: var(--secondary); }
+    hr { border: none; border-top: 1px solid var(--line); margin: 32px 0; }
+    footer.site {
+      border-top: 1px solid var(--line);
+      padding: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer.site a {
+      color: var(--secondary);
+      text-decoration: none;
+      margin: 0 10px;
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 0.18em;
+      font-size: 13px;
+    }
+    footer.site a:hover { color: var(--primary); }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <a href="{{ '/' | relative_url }}">TAKE ONE</a>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer class="site">
+    <a href="{{ '/' | relative_url }}">Início</a>
+    <a href="{{ '/privacy' | relative_url }}">Privacidade</a>
+    <a href="{{ '/terms' | relative_url }}">Termos</a>
+    <a href="mailto:vini.snascimento00@gmail.com">Contato</a>
+  </footer>
+</body>
+</html>
