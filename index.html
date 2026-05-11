@@ -310,7 +310,7 @@
       <div class="ctas" id="ctas">
         <!-- Filled by JS based on device -->
       </div>
-      <p class="platform-hint" id="platform-hint">Disponível para Android · iOS em breve</p>
+      <p class="platform-hint" id="platform-hint">Disponível para Android e iOS</p>
     </section>
 
     <div class="divider"><span>Como funciona</span></div>
@@ -355,9 +355,8 @@
 
   <script>
     (function () {
-      // Update these when the iOS App Store URL is live.
       const ANDROID_URL = 'https://play.google.com/store/apps/details?id=com.jhflabs.takeone';
-      const IOS_URL = null; // e.g. 'https://apps.apple.com/app/idXXXXXXXXX'
+      const IOS_URL = 'https://apps.apple.com/app/take-one/id6765488263';
 
       const ua = navigator.userAgent || '';
       const isIOS =
@@ -391,7 +390,7 @@
         hint.textContent = 'Detectamos que você está no Android.';
       } else {
         ctas.innerHTML = androidBtn('btn-primary') + iosBtn('btn-outline');
-        hint.textContent = 'Disponível para Android · iOS em breve';
+        hint.textContent = 'Disponível para Android e iOS';
       }
     })();
   </script>
