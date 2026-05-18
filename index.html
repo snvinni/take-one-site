@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Take One — Adivinhe o filme em 5 cenas">
   <meta property="og:description" content="Cinco cenas, da mais difícil à mais fácil. Adivinhe o filme antes de chegar no final.">
-  <meta property="og:image" content="https://snvinni.github.io/take-one-site/assets/icon.png">
+  <meta property="og:image" content="https://takeone.app/assets/icon.png">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" type="image/png" href="assets/icon.png">
@@ -381,12 +381,10 @@
       };
 
       if (isIOS) {
-        ctas.innerHTML = iosBtn('btn-primary') + androidBtn('btn-outline');
-        hint.textContent = IOS_URL
-          ? 'Detectamos que você está no iOS.'
-          : 'iOS em breve — abra no Android pra baixar agora.';
+        ctas.innerHTML = iosBtn('btn-primary');
+        hint.textContent = 'Detectamos que você está no iOS.';
       } else if (isAndroid) {
-        ctas.innerHTML = androidBtn('btn-primary') + iosBtn('btn-outline');
+        ctas.innerHTML = androidBtn('btn-primary');
         hint.textContent = 'Detectamos que você está no Android.';
       } else {
         ctas.innerHTML = androidBtn('btn-primary') + iosBtn('btn-outline');
