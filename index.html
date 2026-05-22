@@ -380,12 +380,17 @@
         return `<a class="btn ${variant}" aria-disabled="true">${appleSvg}<span>iOS</span><span class="badge">Em breve</span></a>`;
       };
 
-      if (isIOS) {
+      if (isIOS && IOS_URL) {
+        window.location.replace(IOS_URL);
+        ctas.innerHTML = iosBtn('btn-primary');
+        hint.textContent = 'Abrindo a App Store…';
+      } else if (isAndroid) {
+        window.location.replace(ANDROID_URL);
+        ctas.innerHTML = androidBtn('btn-primary');
+        hint.textContent = 'Abrindo a Play Store…';
+      } else if (isIOS) {
         ctas.innerHTML = iosBtn('btn-primary');
         hint.textContent = 'Detectamos que você está no iOS.';
-      } else if (isAndroid) {
-        ctas.innerHTML = androidBtn('btn-primary');
-        hint.textContent = 'Detectamos que você está no Android.';
       } else {
         ctas.innerHTML = androidBtn('btn-primary') + iosBtn('btn-outline');
         hint.textContent = 'Disponível para Android e iOS';
